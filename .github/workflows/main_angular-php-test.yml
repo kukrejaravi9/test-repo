@@ -15,7 +15,7 @@ jobs:
           -H "X-GitHub-Api-Version: 2022-11-28" \
           -s -o /dev/null -w "%{http_code}" \
           https://api.github.com/repos/kukrejaravi9/TestRepo/actions/workflows/deploy-to-production.yml/dispatches \
-          -d '{"ref":"main","inputs":{"AZURE_REPOSITORY": "Hello"}}') \
+          -d '{"ref":"main"') \
           && if [ $http_response != "204" ]; then \
               exit 1 \ 
           fi \
