@@ -14,8 +14,8 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           -H "X-GitHub-Api-Version: 2022-11-28" \
           -s -o /dev/null -w "%{http_code}" \
-          https://api.github.com/repos/Access-Segment/GatewayReusableWorkflows/actions/workflows/Build_Push_ACR.yml/dispatches \
-          -d '{"ref":"test","inputs":{"AZURE_REPOSITORY": "Hello"}}') \
+          https://api.github.com/repos/kukrejaravi9/TestRepo/actions/workflows/deploy-to-production.yml/dispatches \
+          -d '{"ref":"main","inputs":{"AZURE_REPOSITORY": "Hello"}}') \
           && if [ $http_response != "204" ]; then \
               exit 1 \ 
           fi \
